@@ -1,0 +1,146 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+}
+
+p, .page-header-body {
+    padding: 0 55px; /* внутренние отступы относительно размера сайта */
+}
+
+a {
+    color: white;
+    text-decoration: none; /* Убирает подчеркивание у гиперссылок */
+}
+
+p {
+    font-size: 32px;
+    font-weight: normal; /* Делает шрифт более тонким */
+    color: black;
+}
+
+h2 {
+    padding-top: 48px;
+    padding-bottom: 16px;
+    text-align:center;
+    font-weight: normal;
+    color: #007765;
+    font-size: 64px;
+}
+
+.page-header {
+    position: fixed; /* При скролинге шапка остается вверху сайта */
+    z-index: 1; /* Делает шапку поверх всех элементов сайта */
+    background-color: #007765;
+    width: 100%; /* Длина фона шапки равна длине сайта */
+    height: 84px;
+}
+
+.page-header-body {
+    max-width: 1219px;
+    margin-top: 20px;/* центрирование по вертикали относительно фона шапки */
+}
+
+.page-header-links {
+    font-size: 24px;
+    font-weight: 100;
+    color: white;
+    float: right; /* размещение ссылок в правой части page-header-body */
+    margin: 8px 0; /* внешние отступы для центрирования ссылок относительно page-header-body */
+}
+
+.page-content {
+    padding-top: 84px; /* опускание контента под шапку */
+}
+
+.page-content-1 {
+    max-width: 1219px;
+    margin-bottom: 92px;
+}
+
+.page-content-banner1 {
+    height: 403px;
+    background-image: url(banner1.png);
+    background-size: cover;
+}
+
+.page-content-banner1-text {
+    text-align: center;
+    padding-top: 160px;
+    color: white;
+    font-size: 72px;
+}
+
+.page-content-2 {
+    max-width: 1219px;
+    margin-bottom: 91px;    
+}
+
+.page-content-2 img {
+    float: left;
+    margin: 0 35px 33px 0;
+}
+
+.page-content-banner2 {
+    height: 483px;
+    background-image: url(banner2.png);
+    background-size: cover;
+}
+
+.page-content-banner2-text {
+    padding-top: 128px;
+    text-align: center;
+    font-weight:normal;
+    width: 950px;
+    color: white;
+    font-size: 48px;
+    font-style: italic;
+}
+
+.page-content-3 {
+    background-color: #eeeeee;
+    padding-bottom: 28px;
+}
+
+.page-content-3-team {
+    max-width: 1219px;
+    padding: 40px 55px 0 55px;
+    text-align: center;
+}
+
+.page-content-3-team-person {
+    display: inline-block;
+    margin: 0 15px 0 15px;
+    padding: 0 67px 69px;
+}
+
+.content-team-img {
+    padding: 0 15px;
+}
+
+.content-team-name {
+
+    font-size: 24px;
+    color: #007765;
+}
+
+.content-team-job {
+    text-align: center;
+}
+
+.footer {
+    height: 186px;
+    background-color: #333333;
+}
+
+.footer-text {
+    padding-top: 50px;
+    text-align: center;
+    font-weight: lighter;
+    width: 550px;
+    color: white;
+    font-size: 18px;
+}
