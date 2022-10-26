@@ -1,19 +1,21 @@
 * {
-    margin: 0 auto;
+    margin: 0 auto; /* Обнуляем внешние отступы и центрируем элементы для всей страницы */
 }
 
 body {
-    font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: normal;
-}
-
-p, .page-header-body {
-    padding: 0 55px; /* внутренние отступы относительно размера сайта */
+    font-family:'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal; /* Делаем шрифт на всём сайте менее жирным */
 }
 
 a {
     color: white;
     text-decoration: none; /* Убирает подчеркивание у гиперссылок */
+}
+
+p, h2, .page-header-body, .page-content-banner1-text, .page-content-banner2-text, .page-content-3-team {
+    box-sizing: border-box; /* не даем элементу увеличивать размер границ при применении padding */
+    padding: 0 55px; /* делаем внутренний отступ контента чтобы элементы не прилипали к краям окна браузера */
+    max-width: 1219px; /* не даем элементам распределяться по сайту больше чем в 1219 пикселей */
 }
 
 p {
@@ -23,124 +25,104 @@ p {
 }
 
 h2 {
-    padding-top: 48px;
-    padding-bottom: 16px;
-    text-align:center;
+    text-align: center;
     font-weight: normal;
     color: #007765;
     font-size: 64px;
+    padding-top: 48px;
+    padding-bottom: 16px;
 }
 
 .page-header {
-    position: fixed; /* При скролинге шапка остается вверху сайта */
-    z-index: 1; /* Делает шапку поверх всех элементов сайта */
+    position: fixed; /* сохраняем на месте шапку при скроллинге */
+    z-index: 1; /* делаем шапку поверх всех элементов сайта */
+    width: 100%; /* делаем размер фона шапки равный ширине сайта*/
     background-color: #007765;
-    width: 100%; /* Длина фона шапки равна длине сайта */
     height: 84px;
 }
 
 .page-header-body {
-    max-width: 1219px;
-    margin-top: 20px;/* центрирование по вертикали относительно фона шапки */
+    margin-top: 20px; /* центрируем логотипа и ссылок по вертикали относительно фона шапки */
 }
 
 .page-header-links {
     font-size: 24px;
-    font-weight: 100;
+    font-weight: 100; /* делаем шрифт ссылок более тонким */
     color: white;
     float: right; /* размещение ссылок в правой части page-header-body */
-    margin: 8px 0; /* внешние отступы для центрирования ссылок относительно page-header-body */
+    margin: 8px 0; /* опускаем ссылки по вертикали относительно page-header-body */
 }
 
 .page-content {
-    padding-top: 84px; /* опускание контента под шапку */
+    padding-top: 84px; /* опускаем весь контент сайта под шапку */
 }
 
-.page-content-1 {
-    max-width: 1219px;
-    margin-bottom: 92px;
+.page-content-1, .page-content-2 {
+    margin-bottom: 92px; /* делаем нижний внешний отступ для всех блоков с текстом */
 }
 
 .page-content-banner1 {
-    height: 403px;
     background-image: url(banner1.png);
-    background-size: cover;
+    background-size: cover; /* заставляем фоновое изображение всем своим размером распределиться по ширине сайта */
+    background-position: center; /* центрируем фоновое изображение относительно сайта */
 }
 
 .page-content-banner1-text {
+    padding: 160px 55px; /* центрируем по вертикали задаем высоту изображения внутренними отсутпами сверху и снизу, возвращаем отступ по бокам, так как предыдущий padding на боковой отступ отменился из за двойного объявления*/
     text-align: center;
-    padding-top: 160px;
     color: white;
     font-size: 72px;
 }
 
-.page-content-2 {
-    max-width: 1219px;
-    margin-bottom: 91px;    
-}
-
 .page-content-2 img {
-    float: left;
-    margin: 0 35px 33px 0;
+    float: left; /* размещаем логотип по левую сторону, чтобы текст обтекал логотип */
+    margin: 0 35px 33px 0; /* задаем внешний отступ чтобы текст не прилипал к логотипу */
 }
 
 .page-content-banner2 {
-    height: 483px;
     background-image: url(banner2.png);
-    background-size: cover;
+    background-size: cover; /* заставляем фоновое изображение всем своим размером распределиться по ширине сайта */
+    background-position: center; /* центрируем фоновое изображение относительно сайта */
 }
 
 .page-content-banner2-text {
-    padding-top: 128px;
-    text-align: center;
-    font-weight:normal;
-    width: 950px;
+    padding: 128px 55px; /* центрируем по вертикали задаем высоту изображения внутренними отсутпами сверху и снизу, возвращаем отступ по бокам, так как предыдущий padding на боковой отступ отменился из-за двойного объявления*/
+    text-align: center; /* центрируем текст */
+    font-style: italic;
     color: white;
     font-size: 48px;
-    font-style: italic;
 }
 
 .page-content-3 {
     background-color: #eeeeee;
-    padding-bottom: 28px;
-}
-
-.page-content-3-team {
-    max-width: 1219px;
-    padding: 40px 55px 0 55px;
-    text-align: center;
+    text-align: center; /* центрируем весь текст в блоке */
+    padding-bottom: 86px; /* делаем нижний внутренний отступ чтобы сильнее развести карточки работников от границы блока этого контента */
 }
 
 .page-content-3-team-person {
-    display: inline-block;
-    margin: 0 15px 0 15px;
-    padding: 0 67px 69px;
+    display: inline-block; /* заставляем работников выстроится вряд по ширине сайта */
+    padding: 40px 67px 26px /* задаем внутренний отступ карточки каждого работника  */
 }
 
 .content-team-img {
-    padding: 0 15px;
+    padding: 0 15px;  /* делаем внешний отступ по бокам, чтобы выровнять ширину границ изображения относительно самого длинного имени и фамилии (Richard Hendricks) */
 }
 
 .content-team-name {
-
     font-size: 24px;
     color: #007765;
 }
 
-.content-team-job {
-    text-align: center;
-}
-
-.footer {
-    height: 186px;
+footer {
     background-color: #333333;
 }
 
 .footer-text {
-    padding-top: 50px;
-    text-align: center;
+    box-sizing: border-box; /* не даем элементу увеличивать размер границ при применении padding */
+    max-width: 540px;  /* делаем подпись более компактной */
+    padding: 50px 55px 62px 55px;  /* при помощи верхней и нижней границы задаем высоту фона, и применяем боковые отступы */
+    text-align: center;   /* центрируем текст */
     font-weight: lighter;
-    width: 550px;
     color: white;
     font-size: 18px;
 }
